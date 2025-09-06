@@ -46,7 +46,7 @@ const Home = () => {
           >
             <div className="profile-card">
               <div className="profile-avatar">
-                <div className="avatar-placeholder">B&B</div>
+                <div className="avatar-placeholder">B&D</div>
               </div>
               <div className="profile-info">
                 <h3>Başar Yıldırım</h3>
