@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          <span className="logo-text">B&B</span>
+          <span className="logo-text">B&D</span>
         </Link>
         
         <div className={`navbar-menu ${isOpen ? 'active' : ''}`}>
