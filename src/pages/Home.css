@@ -147,8 +147,56 @@
   text-align: center;
   font-size: 2.5rem;
   font-weight: 700;
-  color: white;
+  color: #2d3748;
   margin-bottom: 3rem;
+}
+
+.expertise-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.expertise-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border-left: 4px solid #667eea;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.expertise-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.15);
+  background: #ffffff;
+}
+
+.expertise-icon {
+  color: #667eea;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 8px;
+  padding: 0.75rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.expertise-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.expertise-content p {
+  color: #4a5568;
+  line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 .skills-grid {
@@ -193,7 +241,7 @@
 
 .stats-section {
   padding: 80px 2rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: white;
 }
 
 .stats-container {
@@ -206,19 +254,20 @@
 
 .stat-item {
   text-align: center;
-  color: white;
+  color: #2d3748;
 }
 
 .stat-item h3 {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  color: #667eea;
 }
 
 .stat-item p {
   font-size: 1.1rem;
-  opacity: 0.9;
-  color: white;
+  color: #4a5568;
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {
@@ -234,6 +283,16 @@
 
   .hero-buttons {
     justify-content: center;
+  }
+
+  .expertise-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .expertise-icon {
+    align-self: center;
   }
 
   .skills-grid {

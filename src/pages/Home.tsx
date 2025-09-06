@@ -32,7 +32,7 @@ const Home = () => {
                 Projelerimi Gör
                 <ArrowRight size={20} />
               </Link>
-              <Link to="/contact" className="btn btn-secondary">
+              <Link to="/contact" className="btn btn-primary">
                 İletişime Geç
               </Link>
             </div>
@@ -67,29 +67,65 @@ const Home = () => {
           className="skills-container"
         >
           <h2 className="section-title">Uzmanlık Alanlarım</h2>
-          <div className="skills-grid">
-            <div className="skill-card">
-              <div className="skill-icon">
-                <Code size={40} />
+          <div className="expertise-list">
+            <div className="expertise-item">
+              <div className="expertise-icon">
+                <Code size={24} />
               </div>
-              <h3>Frontend Geliştirme</h3>
-              <p>React, TypeScript, HTML, CSS, JavaScript ile modern web uygulamaları</p>
+              <div className="expertise-content">
+                <h3>Frontend Geliştirme</h3>
+                <p>React, TypeScript, HTML5, CSS3, JavaScript ES6+ ile modern, performanslı ve kullanıcı dostu web uygulamaları geliştiriyorum.</p>
+              </div>
             </div>
             
-            <div className="skill-card">
-              <div className="skill-icon">
-                <Smartphone size={40} />
+            <div className="expertise-item">
+              <div className="expertise-icon">
+                <Smartphone size={24} />
               </div>
-              <h3>Responsive Tasarım</h3>
-              <p>Mobil uyumlu ve kullanıcı dostu arayüz tasarımları</p>
+              <div className="expertise-content">
+                <h3>Responsive Web Tasarım</h3>
+                <p>Mobil-first yaklaşımı ile tüm cihazlarda mükemmel görünüm sağlayan, kullanıcı deneyimini ön planda tutan responsive tasarımlar.</p>
+              </div>
             </div>
             
-            <div className="skill-card">
-              <div className="skill-icon">
-                <Database size={40} />
+            <div className="expertise-item">
+              <div className="expertise-icon">
+                <Database size={24} />
               </div>
-              <h3>Backend & Data Science</h3>
-              <p>.NET, C#, veri analizi ve makine öğrenmesi projeleri</p>
+              <div className="expertise-content">
+                <h3>Backend & Veri Analizi</h3>
+                <p>.NET Core, C#, Entity Framework ile backend geliştirme ve Python, R ile veri analizi, makine öğrenmesi projeleri.</p>
+              </div>
+            </div>
+
+            <div className="expertise-item">
+              <div className="expertise-icon">
+                <Code size={24} />
+              </div>
+              <div className="expertise-content">
+                <h3>Template Geliştirme</h3>
+                <p>Özelleştirilebilir, SEO uyumlu ve hızlı yüklenen template siteler. Modern tasarım trendleri ve en iyi uygulamalar.</p>
+              </div>
+            </div>
+
+            <div className="expertise-item">
+              <div className="expertise-icon">
+                <Smartphone size={24} />
+              </div>
+              <div className="expertise-content">
+                <h3>UI/UX Tasarım</h3>
+                <p>Kullanıcı arayüzü tasarımı, kullanıcı deneyimi optimizasyonu ve modern tasarım prensipleri ile etkileyici arayüzler.</p>
+              </div>
+            </div>
+
+            <div className="expertise-item">
+              <div className="expertise-icon">
+                <Database size={24} />
+              </div>
+              <div className="expertise-content">
+                <h3>Proje Yönetimi</h3>
+                <p>Agile metodolojiler, versiyon kontrolü (Git), test-driven development ve sürekli entegrasyon süreçleri.</p>
+              </div>
             </div>
           </div>
         </motion.div>
@@ -101,9 +137,9 @@ const Home = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="stats-container text-white"
+          className="stats-container"
         >
-          <div className="stat-item text-white">
+          <div className="stat-item">
             <h3>2+</h3>
             <p>Yıl Deneyim</p>
           </div>
