@@ -1,90 +1,114 @@
-import React from 'react';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from 'lucide-react';
-import './Footer.css';
+import Link from "next/link";
+import { Github, Linkedin, Mail, MapPin } from "lucide-react";
+import { profile, socials } from "@/data/profile";
 
-const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-
+export default function Footer() {
   return (
-    <footer className="footer">
-      <div className="footer-container">
-        <div className="footer-content">
-          {/* Logo ve Açıklama */}
-          <div className="footer-section">
-            <div className="footer-logo">
-              <span className="logo-text">B&B</span>
+    <footer className="relative mt-24 border-t border-slate-200 bg-white/70 backdrop-blur">
+      <div className="mx-auto max-w-6xl px-5 py-12">
+        <div className="grid gap-10 md:grid-cols-3">
+          <div>
+            <div className="font-display text-2xl">
+              <span className="text-slate-900">basar</span>
+              <span className="text-gradient">.dev</span>
             </div>
-            <p className="footer-description">
-              Frontend Developer & Yazılım Mühendisi. Modern web teknolojileri ile 
-              kullanıcı dostu ve etkileyici web uygulamaları geliştiriyorum.
+            <p className="mt-3 max-w-sm text-sm text-slate-600">
+              {profile.tagline}
             </p>
-            <div className="social-links">
-              <a href="#" className="social-link">
-                <Github size={20} />
+            <div className="mt-4 flex gap-3">
+              <a
+                href={socials.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full border border-slate-200 bg-white p-2 text-slate-600 shadow-sm transition-colors hover:border-fuchsia-300 hover:text-fuchsia-600"
+                aria-label="GitHub"
+              >
+                <Github className="h-4 w-4" />
               </a>
-              <a href="#" className="social-link">
-                <Linkedin size={20} />
+              <a
+                href={socials.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full border border-slate-200 bg-white p-2 text-slate-600 shadow-sm transition-colors hover:border-fuchsia-300 hover:text-fuchsia-600"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-4 w-4" />
               </a>
-              <a href="#" className="social-link">
-                <Twitter size={20} />
+              <a
+                href={socials.email}
+                className="rounded-full border border-slate-200 bg-white p-2 text-slate-600 shadow-sm transition-colors hover:border-fuchsia-300 hover:text-fuchsia-600"
+                aria-label="Email"
+              >
+                <Mail className="h-4 w-4" />
               </a>
             </div>
           </div>
 
-          {/* Hızlı Linkler */}
-          <div className="footer-section">
-            <h3>Hızlı Linkler</h3>
-            <ul className="footer-links">
-              <li><a href="/">Ana Sayfa</a></li>
-              <li><a href="/about">Hakkımda</a></li>
-              <li><a href="/experience">Tecrübelerim</a></li>
-              <li><a href="/projects">Ürünlerim</a></li>
-              <li><a href="/contact">İletişim</a></li>
+          <div>
+            <h4 className="font-display text-sm uppercase tracking-widest text-slate-500">
+              Sitemap
+            </h4>
+            <ul className="mt-3 space-y-2 text-sm">
+              <li>
+                <Link href="/" className="text-slate-700 hover:text-slate-900">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="text-slate-700 hover:text-slate-900">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/experience"
+                  className="text-slate-700 hover:text-slate-900"
+                >
+                  Experience
+                </Link>
+              </li>
+              <li>
+                <Link href="/projects" className="text-slate-700 hover:text-slate-900">
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-slate-700 hover:text-slate-900">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Hizmetler */}
-          <div className="footer-section">
-            <h3>Hizmetler</h3>
-            <ul className="footer-links">
-              <li>Web Sitesi Geliştirme</li>
-              <li>Template Siteler</li>
-              <li>Responsive Tasarım</li>
-              <li>Frontend Optimizasyonu</li>
-              <li>Teknik Danışmanlık</li>
+          <div>
+            <h4 className="font-display text-sm uppercase tracking-widest text-slate-500">
+              Reach me
+            </h4>
+            <ul className="mt-3 space-y-2 text-sm text-slate-700">
+              <li className="flex items-center gap-2">
+                <MapPin className="h-4 w-4 text-fuchsia-500" />
+                {profile.location}
+              </li>
+              <li className="flex items-center gap-2">
+                <Mail className="h-4 w-4 text-fuchsia-500" />
+                <a
+                  href={`mailto:${profile.email}`}
+                  className="hover:text-slate-900"
+                >
+                  {profile.email}
+                </a>
+              </li>
             </ul>
-          </div>
-
-          {/* İletişim Bilgileri */}
-          <div className="footer-section">
-            <h3>İletişim</h3>
-            <div className="contact-info">
-              <div className="contact-item">
-                <Mail size={16} />
-                <span>basaryldrm1237@gmail.com</span>
-              </div>
-              <div className="contact-item">
-                <Phone size={16} />
-                <span>0546 531 49 10</span>
-              </div>
-              <div className="contact-item">
-                <MapPin size={16} />
-                <span>İstanbul, Türkiye</span>
-              </div>
-            </div>
           </div>
         </div>
 
-        {/* Alt Bilgi */}
-        <div className="footer-bottom">
-          <div className="footer-bottom-content">
-            <p>&copy; {currentYear} Başar Yıldırım. Tüm hakları saklıdır.</p>
-            <p>Domain: basaryildirim.com</p>
-          </div>
+        <div className="mt-10 flex flex-col items-start justify-between gap-2 border-t border-slate-200 pt-6 text-xs text-slate-500 md:flex-row md:items-center">
+          <span>
+            © {new Date().getFullYear()} {profile.name}. Built with Next.js & Tailwind.
+          </span>
+          <span>Designed and shipped from Istanbul.</span>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}
