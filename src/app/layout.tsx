@@ -44,8 +44,8 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrains.variable} scroll-px-safe`}
     >
-      <body className="relative min-h-screen overflow-x-hidden text-slate-800">
-        <div className="pointer-events-none fixed inset-0 -z-10 bg-grid-pattern bg-[size:48px_48px] opacity-40" />
+      <body className="relative min-h-screen overflow-x-hidden bg-white text-neutral-800 antialiased">
+        <div className="pointer-events-none fixed inset-0 -z-10 bg-grid-pattern bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_at_top,black,transparent_75%)]" />
         <div className="relative">
           <Navbar />
           <main className="relative">{children}</main>

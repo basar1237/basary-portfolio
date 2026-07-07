@@ -17,7 +17,6 @@ export type Project = {
   myWork: string[];
   stack: string[];
   highlights: string[];
-  accent: string;
   badges?: string[];
 };
 
@@ -52,7 +51,6 @@ export const projects: Project[] = [
       "App Router with i18n via [locale] segment",
       "Live preview & on-demand revalidation from Payload",
     ],
-    accent: "from-violet-500 via-fuchsia-500 to-pink-500",
     badges: ["Next.js", "Payload", "Multi-tenant"],
   },
   {
@@ -82,7 +80,6 @@ export const projects: Project[] = [
       "Production-grade SEO and redirects",
       "Draft preview & live preview workflows",
     ],
-    accent: "from-sky-500 via-cyan-500 to-teal-400",
     badges: ["Next.js", "Payload", "UK Client"],
   },
   {
@@ -113,7 +110,6 @@ export const projects: Project[] = [
       "HTTPS dev with Turbopack",
       "Transactional emails in-repo",
     ],
-    accent: "from-indigo-500 via-blue-500 to-cyan-400",
     badges: ["Next.js", "Payload", "Mantine"],
   },
   {
@@ -145,7 +141,6 @@ export const projects: Project[] = [
       "3D-secure payment + partial-payment flows",
       "CDN-backed static + language pipeline",
     ],
-    accent: "from-fuchsia-500 via-pink-500 to-rose-500",
     badges: ["OTA", "ASP.NET", "jQuery"],
   },
   {
@@ -176,7 +171,6 @@ export const projects: Project[] = [
       "Turkcell Mobile Connect auth",
       "Recaptcha v2 + v3 hardened login",
     ],
-    accent: "from-emerald-500 via-teal-500 to-cyan-500",
     badges: ["OTA", "TripAdvisor", "ASP.NET"],
   },
   {
@@ -198,7 +192,6 @@ export const projects: Project[] = [
       "Shared API gateway + CDN",
       "Brand-specific theming via Lidya scope codes",
     ],
-    accent: "from-amber-500 via-orange-500 to-rose-500",
     badges: ["Web", "Mobile", "ASP.NET"],
   },
   {
@@ -220,7 +213,6 @@ export const projects: Project[] = [
       "Standalone hotel search & detail flows",
       "Grunt-driven static template build",
     ],
-    accent: "from-lime-500 via-emerald-500 to-teal-500",
     badges: ["Hotels", "RTL"],
   },
   {
@@ -240,7 +232,6 @@ export const projects: Project[] = [
       "Static template → MVC integration",
       "Multi-product search UI",
     ],
-    accent: "from-rose-500 via-pink-500 to-fuchsia-500",
     badges: ["OTA", "Template"],
   },
   {
@@ -257,7 +248,6 @@ export const projects: Project[] = [
     ],
     stack: ["ASP.NET Core MVC", "Razor", "Angular template", "jQuery", "Bootstrap"],
     highlights: ["Tour-product oriented UX", "Shared static template stack"],
-    accent: "from-orange-500 via-amber-500 to-yellow-400",
     badges: ["Holidays", "ASP.NET"],
   },
   {
@@ -275,7 +265,6 @@ export const projects: Project[] = [
     ],
     stack: ["ASP.NET Core MVC", "C#", "Angular template", "jQuery", "Bootstrap"],
     highlights: ["Car-rental & transfer flows", "Yarn-driven static template"],
-    accent: "from-cyan-500 via-blue-500 to-indigo-500",
     badges: ["Car Rental", "Transfer"],
   },
   {
@@ -293,7 +282,6 @@ export const projects: Project[] = [
     ],
     stack: ["ASP.NET Core MVC", "Razor", "jQuery", "Bootstrap"],
     highlights: ["Live booking brand", "Bridged legacy to Next.js rewrite"],
-    accent: "from-blue-500 via-indigo-500 to-violet-500",
     badges: ["Booking", "ASP.NET"],
   },
   {
@@ -310,7 +298,6 @@ export const projects: Project[] = [
     ],
     stack: ["ASP.NET Core MVC", "Razor", "jQuery", "Bootstrap"],
     highlights: ["Brand on the shared Lidya OTA stack", "CDN-backed static delivery"],
-    accent: "from-red-500 via-rose-500 to-pink-500",
     badges: ["OTA", "ASP.NET"],
   },
   {
@@ -326,7 +313,6 @@ export const projects: Project[] = [
     ],
     stack: ["Angular template", "Bootstrap", "jQuery", "SCSS"],
     highlights: ["White-label friendly design", "Carrier-grade styling system"],
-    accent: "from-red-600 via-rose-600 to-pink-600",
     badges: ["White-label", "Template"],
   },
   {
@@ -346,7 +332,6 @@ export const projects: Project[] = [
       "Mobile-first delivery",
       "Shared API with the desktop site",
     ],
-    accent: "from-teal-500 via-cyan-500 to-sky-500",
     badges: ["Mobile", "Performance"],
   },
 ];

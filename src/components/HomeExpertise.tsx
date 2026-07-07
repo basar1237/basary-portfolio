@@ -3,30 +3,18 @@
 import { motion } from "framer-motion";
 import { skills } from "@/data/skills";
 
-const palette = [
-  "from-violet-500 to-fuchsia-500",
-  "from-fuchsia-500 to-pink-500",
-  "from-pink-500 to-rose-500",
-  "from-cyan-500 to-teal-400",
-  "from-emerald-500 to-cyan-500",
-  "from-amber-500 to-rose-500",
-];
-
 export default function HomeExpertise() {
   const top = skills.slice(0, 9);
 
   return (
     <section className="relative mx-auto max-w-6xl px-5 py-20">
-      <div className="mb-10 max-w-3xl">
-        <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-fuchsia-200 bg-fuchsia-50 px-3 py-1 text-xs uppercase tracking-[0.2em] text-fuchsia-700">
-          <span className="h-1.5 w-1.5 rounded-full bg-fuchsia-500" />
-          Skills
-        </div>
-        <h2 className="font-display text-3xl font-semibold leading-tight text-slate-900 md:text-4xl">
+      <div className="mb-12 max-w-3xl">
+        <div className="eyebrow mb-4">Skills</div>
+        <h2 className="font-display text-3xl font-semibold leading-tight tracking-tight text-neutral-900 md:text-[2.6rem]">
           Tools I reach for{" "}
           <span className="text-gradient">every day</span>
         </h2>
-        <p className="mt-3 text-base leading-relaxed text-slate-600">
+        <p className="mt-4 text-base leading-relaxed text-neutral-500">
           A curated subset of the stack — full list lives on the About page.
         </p>
       </div>
@@ -35,32 +23,28 @@ export default function HomeExpertise() {
         {top.map((s, i) => (
           <motion.div
             key={s.name}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.04, duration: 0.5 }}
+            transition={{ delay: i * 0.04, duration: 0.45 }}
             viewport={{ once: true }}
-            className="group relative overflow-hidden rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md"
+            className="card card-hover p-5"
           >
             <div className="flex items-baseline justify-between">
-              <span className="font-display text-base text-slate-900">
+              <span className="font-display text-base font-medium text-neutral-900">
                 {s.name}
               </span>
-              <span className="font-mono text-xs text-slate-500">
+              <span className="font-mono text-xs text-neutral-400">
                 {s.level}%
               </span>
             </div>
-            {s.note && (
-              <p className="mt-1 text-xs text-slate-500">{s.note}</p>
-            )}
-            <div className="mt-4 h-1.5 overflow-hidden rounded-full bg-slate-100">
+            {s.note && <p className="mt-1 text-xs text-neutral-400">{s.note}</p>}
+            <div className="mt-4 h-1 overflow-hidden rounded-full bg-neutral-100">
               <motion.div
                 initial={{ width: 0 }}
                 whileInView={{ width: `${s.level}%` }}
-                transition={{ duration: 1, delay: i * 0.05 }}
+                transition={{ duration: 0.9, delay: i * 0.05, ease: "easeOut" }}
                 viewport={{ once: true }}
-                className={`h-full rounded-full bg-gradient-to-r ${
-                  palette[i % palette.length]
-                }`}
+                className="h-full rounded-full bg-neutral-900"
               />
             </div>
           </motion.div>

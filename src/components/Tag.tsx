@@ -1,14 +1,16 @@
 import { ReactNode } from "react";
 import cx from "@/lib/cx";
 
-type Variant = "default" | "violet" | "cyan" | "amber" | "rose";
+type Variant = "default" | "accent" | "violet" | "cyan" | "amber" | "rose";
 
 const styles: Record<Variant, string> = {
-  default: "border-slate-200 bg-slate-50 text-slate-700",
-  violet: "border-violet-200 bg-violet-50 text-violet-700",
-  cyan: "border-cyan-200 bg-cyan-50 text-cyan-700",
-  amber: "border-amber-200 bg-amber-50 text-amber-700",
-  rose: "border-rose-200 bg-rose-50 text-rose-700",
+  default: "border-neutral-200 bg-neutral-50 text-neutral-600",
+  accent: "border-accent/20 bg-accent-soft text-accent",
+  // Legacy variants normalized to the neutral system
+  violet: "border-neutral-200 bg-neutral-50 text-neutral-600",
+  cyan: "border-neutral-200 bg-neutral-50 text-neutral-600",
+  amber: "border-neutral-200 bg-neutral-50 text-neutral-600",
+  rose: "border-neutral-200 bg-neutral-50 text-neutral-600",
 };
 
 export default function Tag({
@@ -23,7 +25,7 @@ export default function Tag({
   return (
     <span
       className={cx(
-        "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium",
+        "inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-medium",
         styles[variant],
         className
       )}

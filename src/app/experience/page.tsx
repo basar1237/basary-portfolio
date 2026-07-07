@@ -88,18 +88,14 @@ const certifications = [
 export default function ExperiencePage() {
   return (
     <>
-      <section className="relative overflow-hidden">
-        <div className="aurora" aria-hidden />
+      <section className="relative">
         <div className="relative mx-auto max-w-6xl px-5 pb-10 pt-20 md:pt-28">
-          <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-fuchsia-200 bg-fuchsia-50 px-3 py-1 text-xs uppercase tracking-[0.2em] text-fuchsia-700">
-            <span className="h-1.5 w-1.5 rounded-full bg-fuchsia-500" />
-            Experience
-          </div>
-          <h1 className="font-display text-4xl font-semibold leading-tight text-slate-900 md:text-6xl">
+          <div className="eyebrow mb-5">Experience</div>
+          <h1 className="max-w-3xl font-display text-4xl font-semibold leading-[1.08] tracking-tight text-neutral-900 md:text-6xl">
             The career,{" "}
             <span className="text-gradient">timeline-style.</span>
           </h1>
-          <p className="mt-5 max-w-3xl text-base leading-relaxed text-slate-600 md:text-lg">
+          <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-500 md:text-lg">
             Where I&apos;ve shipped production code, what I learned along the
             way, and the certifications that came with it.
           </p>
@@ -115,23 +111,22 @@ export default function ExperiencePage() {
           </>
         }
       >
-        <div className="relative space-y-8">
+        <div className="relative space-y-6">
           {work.map((w) => (
-            <article
-              key={w.company}
-              className="relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
-            >
+            <article key={w.company} className="card p-6 md:p-7">
               <div className="flex flex-wrap items-start justify-between gap-3">
-                <div className="flex items-start gap-3">
-                  <div className="grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br from-violet-500 via-fuchsia-500 to-pink-500 text-white shadow-md">
+                <div className="flex items-start gap-4">
+                  <div className="grid h-12 w-12 place-items-center rounded-lg border border-neutral-200 text-neutral-700">
                     <Briefcase className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="font-display text-xl text-slate-900 md:text-2xl">
+                    <h3 className="font-display text-xl font-semibold tracking-tight text-neutral-900 md:text-2xl">
                       {w.role}
                     </h3>
-                    <div className="mt-1 text-sm text-slate-700">{w.company}</div>
-                    <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-500">
+                    <div className="mt-1 text-sm text-neutral-700">
+                      {w.company}
+                    </div>
+                    <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-neutral-500">
                       <span className="inline-flex items-center gap-1">
                         <MapPin className="h-3.5 w-3.5" />
                         {w.location}
@@ -140,39 +135,39 @@ export default function ExperiencePage() {
                         <Calendar className="h-3.5 w-3.5" />
                         {w.period}
                       </span>
-                      <Tag variant="violet">{w.type}</Tag>
+                      <Tag variant="accent">{w.type}</Tag>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <p className="mt-5 text-sm leading-relaxed text-slate-700">
+              <p className="mt-5 text-sm leading-relaxed text-neutral-600">
                 {w.summary}
               </p>
 
               <div className="mt-5">
-                <div className="text-xs uppercase tracking-[0.2em] text-slate-500">
+                <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-neutral-400">
                   Responsibilities
                 </div>
-                <ul className="mt-2 grid gap-1.5 text-sm text-slate-700 md:grid-cols-2">
+                <ul className="mt-2 grid gap-1.5 text-sm text-neutral-700 md:grid-cols-2">
                   {w.bullets.map((b) => (
-                    <li key={b} className="flex gap-2">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500" />
+                    <li key={b} className="flex gap-2.5">
+                      <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-accent" />
                       <span>{b}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="mt-5 border-t border-slate-100 pt-4">
-                <div className="text-xs uppercase tracking-[0.2em] text-slate-500">
+              <div className="mt-5 border-t border-neutral-100 pt-4">
+                <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-neutral-400">
                   Stack
                 </div>
                 <div className="mt-2 flex flex-wrap gap-1.5">
                   {w.stack.map((s) => (
                     <span
                       key={s}
-                      className="rounded-md border border-slate-200 bg-slate-50 px-2 py-0.5 font-mono text-[11px] text-slate-700"
+                      className="rounded-md border border-neutral-200 bg-neutral-50 px-2 py-0.5 font-mono text-[11px] text-neutral-600"
                     >
                       {s}
                     </span>
@@ -188,25 +183,23 @@ export default function ExperiencePage() {
         eyebrow="Education"
         title={
           <>
-            Where it{" "}
-            <span className="text-gradient">started</span>
+            Where it <span className="text-gradient">started</span>
           </>
         }
       >
-        <div className="space-y-6">
+        <div className="space-y-5">
           {education.map((e) => (
-            <article
-              key={e.title}
-              className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
-            >
-              <div className="flex items-start gap-3">
-                <div className="grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br from-cyan-500 to-teal-400 text-white shadow-md">
+            <article key={e.title} className="card p-6 md:p-7">
+              <div className="flex items-start gap-4">
+                <div className="grid h-12 w-12 place-items-center rounded-lg border border-neutral-200 text-neutral-700">
                   <GraduationCap className="h-5 w-5" />
                 </div>
                 <div>
-                  <h3 className="font-display text-xl text-slate-900">{e.title}</h3>
-                  <div className="mt-1 text-sm text-slate-700">{e.school}</div>
-                  <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-500">
+                  <h3 className="font-display text-xl font-semibold tracking-tight text-neutral-900">
+                    {e.title}
+                  </h3>
+                  <div className="mt-1 text-sm text-neutral-700">{e.school}</div>
+                  <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-neutral-500">
                     <span className="inline-flex items-center gap-1">
                       <MapPin className="h-3.5 w-3.5" />
                       {e.location}
@@ -221,26 +214,26 @@ export default function ExperiencePage() {
 
               <div className="mt-5 grid gap-5 md:grid-cols-2">
                 <div>
-                  <div className="text-xs uppercase tracking-[0.2em] text-slate-500">
+                  <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-neutral-400">
                     Coursework
                   </div>
-                  <ul className="mt-2 space-y-1.5 text-sm text-slate-700">
+                  <ul className="mt-2 space-y-1.5 text-sm text-neutral-700">
                     {e.bullets.map((b) => (
-                      <li key={b} className="flex gap-2">
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-500" />
+                      <li key={b} className="flex gap-2.5">
+                        <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-neutral-300" />
                         <span>{b}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
                 <div>
-                  <div className="text-xs uppercase tracking-[0.2em] text-slate-500">
+                  <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-neutral-400">
                     Achievements
                   </div>
-                  <ul className="mt-2 space-y-1.5 text-sm text-slate-700">
+                  <ul className="mt-2 space-y-1.5 text-sm text-neutral-700">
                     {e.achievements.map((a) => (
-                      <li key={a} className="flex gap-2">
-                        <BadgeCheck className="mt-0.5 h-4 w-4 text-emerald-500" />
+                      <li key={a} className="flex gap-2.5">
+                        <BadgeCheck className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
                         <span>{a}</span>
                       </li>
                     ))}
@@ -256,25 +249,27 @@ export default function ExperiencePage() {
         eyebrow="Certifications"
         title={
           <>
-            Continuous{" "}
-            <span className="text-gradient">learning</span>
+            Continuous <span className="text-gradient">learning</span>
           </>
         }
       >
         <div className="grid gap-4 md:grid-cols-3">
           {certifications.map((c) => (
-            <article
-              key={c.title}
-              className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
-            >
+            <article key={c.title} className="card p-5">
               <div className="flex items-start justify-between gap-3">
-                <h3 className="font-display text-lg text-slate-900">{c.title}</h3>
-                <span className="font-mono text-xs text-slate-500">{c.date}</span>
+                <h3 className="font-display text-lg font-medium text-neutral-900">
+                  {c.title}
+                </h3>
+                <span className="font-mono text-xs text-neutral-400">
+                  {c.date}
+                </span>
               </div>
-              <div className="mt-1 text-xs uppercase tracking-widest text-fuchsia-600">
+              <div className="mt-1 font-mono text-[11px] uppercase tracking-[0.14em] text-accent">
                 {c.issuer}
               </div>
-              <p className="mt-3 text-sm text-slate-600">{c.description}</p>
+              <p className="mt-3 text-sm leading-relaxed text-neutral-500">
+                {c.description}
+              </p>
             </article>
           ))}
         </div>

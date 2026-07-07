@@ -1,5 +1,5 @@
 import Section from "@/components/Section";
-import { Mail, MapPin, Phone, Github, Linkedin, Sparkles } from "lucide-react";
+import { Mail, MapPin, Phone, Github, Linkedin, ArrowUpRight } from "lucide-react";
 import { profile, socials } from "@/data/profile";
 import { Metadata } from "next";
 
@@ -15,27 +15,23 @@ export default function ContactPage() {
       label: "Work email",
       value: profile.email,
       href: `mailto:${profile.email}`,
-      accent: "from-violet-500 via-fuchsia-500 to-pink-500",
     },
     {
       icon: Mail,
       label: "Personal email",
       value: profile.altEmail,
       href: `mailto:${profile.altEmail}`,
-      accent: "from-fuchsia-500 to-pink-500",
     },
     {
       icon: Phone,
       label: "Phone",
       value: profile.phone,
       href: `tel:${profile.phone.replace(/\s/g, "")}`,
-      accent: "from-pink-500 to-rose-500",
     },
     {
       icon: MapPin,
       label: "Location",
       value: profile.location,
-      accent: "from-cyan-500 to-teal-400",
     },
     {
       icon: Github,
@@ -43,7 +39,6 @@ export default function ContactPage() {
       value: "@basar1237",
       href: socials.github,
       external: true,
-      accent: "from-emerald-500 to-cyan-500",
     },
     {
       icon: Linkedin,
@@ -51,26 +46,21 @@ export default function ContactPage() {
       value: "Connect on LinkedIn",
       href: socials.linkedin,
       external: true,
-      accent: "from-amber-500 to-rose-500",
     },
   ];
 
   return (
     <>
-      <section className="relative overflow-hidden">
-        <div className="aurora" aria-hidden />
+      <section className="relative">
         <div className="relative mx-auto max-w-6xl px-5 pb-10 pt-20 md:pt-28">
-          <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-fuchsia-200 bg-fuchsia-50 px-3 py-1 text-xs uppercase tracking-[0.2em] text-fuchsia-700">
-            <span className="h-1.5 w-1.5 rounded-full bg-fuchsia-500" />
-            Contact
-          </div>
-          <h1 className="font-display text-4xl font-semibold leading-tight text-slate-900 md:text-6xl">
-            Got something cool to{" "}
+          <div className="eyebrow mb-5">Contact</div>
+          <h1 className="max-w-3xl font-display text-4xl font-semibold leading-[1.08] tracking-tight text-neutral-900 md:text-6xl">
+            Got something to{" "}
             <span className="text-gradient">build together?</span>
           </h1>
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-600 md:text-lg">
-            I&apos;m happy to chat about product work, freelance gigs, Next.js
-            + Payload migrations, or simply the latest in the React ecosystem.
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-neutral-500 md:text-lg">
+            I&apos;m happy to chat about product work, freelance gigs, Next.js +
+            Payload migrations, or simply the latest in the React ecosystem.
             Pick the channel that suits you.
           </p>
         </div>
@@ -80,12 +70,11 @@ export default function ContactPage() {
         eyebrow="Channels"
         title={
           <>
-            Six ways to{" "}
-            <span className="text-gradient">say hi</span>
+            Six ways to <span className="text-gradient">say hi</span>
           </>
         }
       >
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-px overflow-hidden rounded-xl border border-neutral-200 bg-neutral-200 md:grid-cols-2 lg:grid-cols-3">
           {items.map((it) => {
             const Wrapper: React.ElementType = it.href ? "a" : "div";
             const props = it.href
@@ -99,20 +88,20 @@ export default function ContactPage() {
               <Wrapper
                 key={it.label}
                 {...props}
-                className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+                className="group relative bg-white p-6 transition-colors hover:bg-neutral-50"
               >
-                <div
-                  className={`absolute -right-10 -top-10 h-32 w-32 rounded-full bg-gradient-to-br ${it.accent} opacity-15 blur-2xl transition-opacity group-hover:opacity-30`}
-                />
-                <div
-                  className={`mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br ${it.accent} text-white shadow-md`}
-                >
-                  <it.icon className="h-5 w-5" />
+                <div className="flex items-start justify-between">
+                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-neutral-200 text-neutral-700 transition-colors group-hover:border-accent group-hover:text-accent">
+                    <it.icon className="h-5 w-5" />
+                  </div>
+                  {it.href && (
+                    <ArrowUpRight className="h-4 w-4 text-neutral-300 transition-colors group-hover:text-accent" />
+                  )}
                 </div>
-                <div className="text-xs uppercase tracking-widest text-slate-500">
+                <div className="mt-4 font-mono text-[11px] uppercase tracking-[0.14em] text-neutral-400">
                   {it.label}
                 </div>
-                <div className="mt-1 break-words font-display text-lg text-slate-900">
+                <div className="mt-1 break-words font-display text-lg font-medium text-neutral-900">
                   {it.value}
                 </div>
               </Wrapper>
@@ -122,16 +111,16 @@ export default function ContactPage() {
       </Section>
 
       <Section
-        eyebrow="What I'm into"
+        eyebrow="Best fit"
         title={
           <>
-            Best fit{" "}
+            A good fit{" "}
             <span className="text-gradient">for working with me</span>
           </>
         }
         description="Some of the work I'd love to take on, and what to expect when we collaborate."
       >
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-5 md:grid-cols-2">
           {[
             {
               title: "Next.js + Payload migrations",
@@ -150,16 +139,16 @@ export default function ContactPage() {
               text: "Mobile-first, accessible, motion-aware UIs that feel calm and fast — not chaotic and animated for the sake of it.",
             },
           ].map((c) => (
-            <div
-              key={c.title}
-              className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
-            >
-              <div className="mb-3 inline-flex items-center gap-2 text-xs uppercase tracking-widest text-fuchsia-600">
-                <Sparkles className="h-3.5 w-3.5" />
+            <div key={c.title} className="card p-6">
+              <div className="mb-3 font-mono text-[11px] uppercase tracking-[0.14em] text-accent">
                 Good fit
               </div>
-              <h3 className="font-display text-lg text-slate-900">{c.title}</h3>
-              <p className="mt-2 text-sm text-slate-600">{c.text}</p>
+              <h3 className="font-display text-lg font-medium text-neutral-900">
+                {c.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-neutral-500">
+                {c.text}
+              </p>
             </div>
           ))}
         </div>
