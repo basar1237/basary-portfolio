@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Clarity from "@/components/Clarity";
 import { profile } from "@/data/profile";
 
 const inter = Inter({
@@ -52,6 +53,7 @@ export default function RootLayout({
           <Footer />
         </div>
         <Analytics />
+        <Clarity />
       </body>
     </html>
   );
