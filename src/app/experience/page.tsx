@@ -11,14 +11,16 @@ export const metadata: Metadata = {
 
 const work = [
   {
-    role: "Frontend Engineer",
+    role: "Frontend Engineer & AI Engineer",
     company: "Lidya Teknoloji",
     location: "Istanbul, Türkiye",
     period: `${profile.startedAt} – Present`,
     type: "Full-time",
     summary:
-      "Owning UI work across Lidya's travel & booking portfolio — from a multi-tenant Next.js + Payload CMS platform down to legacy ASP.NET MVC + jQuery template sites that still serve real bookings.",
+      "Owning UI work across Lidya's travel & booking portfolio — from a multi-tenant Next.js + Payload CMS platform down to legacy ASP.NET MVC + jQuery template sites that still serve real bookings — while running an AI-first development workflow built on Claude Code.",
     bullets: [
+      "Adopted Claude Code as the core development workflow: agentic planning, implementation, code review and test automation with MCP integrations and custom subagents.",
+      "Built LLM-powered products end to end: a real-time phone voice agent (Vapi + Claude), an AI stock-analysis app for Borsa İstanbul (Next.js + FastAPI) and AI modules inside an ERP product.",
       "Built tenant-app routes in the Lidya Travel Next.js monorepo (App Router, [locale]/hotel, search-results, slug pages).",
       "Modeled Payload CMS collections, blocks and live preview wired into the tenant frontend.",
       "Shipped UI for production OTA brands: Fulltrip, Parafly Travel, Gezibank, YKM Turizm, Denizle Seyahat, Salam Booking, İrem Tour, Pronto Tatil, Troyecar.",
@@ -30,6 +32,11 @@ const work = [
       "Next.js",
       "React",
       "TypeScript",
+      "Claude Code",
+      "Claude API",
+      "MCP",
+      "Vapi",
+      "FastAPI",
       "Payload CMS",
       "Mantine",
       "Tailwind CSS",

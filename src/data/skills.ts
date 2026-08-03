@@ -1,7 +1,7 @@
 export type Skill = {
   name: string;
   level: number;
-  category: "frontend" | "backend" | "tooling" | "cms" | "data";
+  category: "frontend" | "backend" | "tooling" | "cms" | "data" | "ai";
   note?: string;
 };
 
@@ -24,10 +24,16 @@ export const skills: Skill[] = [
   { name: "Docker", level: 70, category: "tooling" },
   { name: "Turborepo / pnpm", level: 78, category: "tooling" },
   { name: "Python (Pandas, Sklearn)", level: 70, category: "data" },
+  { name: "Claude Code", level: 92, category: "ai", note: "Agentic dev workflows: plan, build, test, ship" },
+  { name: "Claude API / LLM Integration", level: 85, category: "ai", note: "Tool use, structured output, streaming" },
+  { name: "MCP (Model Context Protocol)", level: 80, category: "ai", note: "Custom servers & integrations" },
+  { name: "Prompt Engineering", level: 85, category: "ai", note: "System prompts, agent design, evals" },
+  { name: "Voice AI (Vapi)", level: 78, category: "ai", note: "Real-time phone agents with Claude" },
+  { name: "RAG & AI Pipelines", level: 75, category: "ai", note: "FastAPI backends, embeddings, analysis tools" },
 ];
 
 export const stats = [
-  { label: "Years in Production", value: "3+" },
+  { label: "Years in Production", value: "2+" },
   { label: "Shipped Travel Brands", value: "10+" },
   { label: "Languages Supported", value: "5+" },
   { label: "Tenants Powered", value: "Multi" },

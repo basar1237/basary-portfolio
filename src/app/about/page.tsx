@@ -1,4 +1,4 @@
-import { Calendar, MapPin, Mail, Phone, GraduationCap, Briefcase, Coffee, Heart } from "lucide-react";
+import { Calendar, MapPin, Mail, Phone, GraduationCap, Briefcase, Coffee, Heart, Bot, Sparkles, Workflow } from "lucide-react";
 import Section from "@/components/Section";
 import { profile } from "@/data/profile";
 import { skills } from "@/data/skills";
@@ -103,6 +103,65 @@ export default function AboutPage() {
               + Payload CMS multi-tenant platform. I ship UI for flights,
               hotels, buses, transfers and tour products used by real travelers
               every day.
+            </p>
+          </article>
+        </div>
+      </Section>
+
+      <Section
+        eyebrow="AI Engineering"
+        title={
+          <>
+            Building <span className="text-gradient">with and for AI</span>
+          </>
+        }
+        description="AI isn't a side interest — it's how I work and what I build. Claude Code sits at the center of my development workflow, and LLM-powered products are a growing part of what I ship."
+      >
+        <div className="grid gap-5 lg:grid-cols-3">
+          <article className="card p-6">
+            <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-neutral-200 text-neutral-700">
+              <Workflow className="h-5 w-5" />
+            </div>
+            <h3 className="mt-4 font-display text-xl font-medium text-neutral-900">
+              Agentic development with Claude Code
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-neutral-600">
+              My daily workflow runs on Claude Code: planning architecture,
+              implementing features with parallel agents, automated code review
+              and test loops. I extend it with MCP servers, custom subagents
+              and hooks — turning ideas into shipped, full-stack products fast,
+              as a one-person team.
+            </p>
+          </article>
+
+          <article className="card p-6">
+            <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-neutral-200 text-neutral-700">
+              <Bot className="h-5 w-5" />
+            </div>
+            <h3 className="mt-4 font-display text-xl font-medium text-neutral-900">
+              LLM-powered products
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-neutral-600">
+              I&apos;ve built a real-time phone voice agent (Vapi + Claude with
+              calendar &amp; email integrations), an AI stock-analysis web app
+              for Borsa İstanbul (Next.js + FastAPI + LLM), and AI-assisted
+              modules inside a wholesale-market ERP — all designed, built and
+              shipped end to end.
+            </p>
+          </article>
+
+          <article className="card p-6">
+            <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-neutral-200 text-neutral-700">
+              <Sparkles className="h-5 w-5" />
+            </div>
+            <h3 className="mt-4 font-display text-xl font-medium text-neutral-900">
+              How it&apos;s done
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-neutral-600">
+              Prompt engineering and agent design, tool use (function calling),
+              structured outputs, RAG pipelines and streaming UX. I treat
+              prompts and agent configs like code — versioned, tested and
+              iterated — so AI features behave predictably in production.
             </p>
           </article>
         </div>

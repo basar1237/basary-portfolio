@@ -7,6 +7,7 @@ import cx from "@/lib/cx";
 
 const filters: Array<{ id: Skill["category"] | "all"; label: string }> = [
   { id: "all", label: "All" },
+  { id: "ai", label: "AI" },
   { id: "frontend", label: "Frontend" },
   { id: "cms", label: "CMS" },
   { id: "backend", label: "Backend" },
