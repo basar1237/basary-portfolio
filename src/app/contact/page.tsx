@@ -4,33 +4,33 @@ import { profile, socials } from "@/data/profile";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Contact — ${profile.name}`,
-  description: `Get in touch with ${profile.name} — ${profile.role} at ${profile.company}.`,
+  title: `İletişim — ${profile.name}`,
+  description: `${profile.name} ile iletişime geç — ${profile.company} bünyesinde ${profile.role}.`,
 };
 
 export default function ContactPage() {
   const items = [
     {
       icon: Mail,
-      label: "Work email",
+      label: "İş e-postası",
       value: profile.email,
       href: `mailto:${profile.email}`,
     },
     {
       icon: Mail,
-      label: "Personal email",
+      label: "Kişisel e-posta",
       value: profile.altEmail,
       href: `mailto:${profile.altEmail}`,
     },
     {
       icon: Phone,
-      label: "Phone",
+      label: "Telefon",
       value: profile.phone,
       href: `tel:${profile.phone.replace(/\s/g, "")}`,
     },
     {
       icon: MapPin,
-      label: "Location",
+      label: "Konum",
       value: profile.location,
     },
     {
@@ -43,7 +43,7 @@ export default function ContactPage() {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "Connect on LinkedIn",
+      value: "LinkedIn'de bağlantı kur",
       href: socials.linkedin,
       external: true,
     },
@@ -53,24 +53,24 @@ export default function ContactPage() {
     <>
       <section className="relative">
         <div className="relative mx-auto max-w-6xl px-5 pb-10 pt-20 md:pt-28">
-          <div className="eyebrow mb-5">Contact</div>
+          <div className="eyebrow mb-5">İletişim</div>
           <h1 className="max-w-3xl font-display text-4xl font-semibold leading-[1.08] tracking-tight text-neutral-900 md:text-6xl">
-            Got something to{" "}
-            <span className="text-gradient">build together?</span>
+            Birlikte{" "}
+            <span className="text-gradient">geliştireceğimiz bir şey mi var?</span>
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-neutral-500 md:text-lg">
-            I&apos;m happy to chat about product work, freelance gigs, Next.js +
-            Payload migrations, or simply the latest in the React ecosystem.
-            Pick the channel that suits you.
+            Ürün projeleri, freelance işler, Next.js + Payload geçişleri ya da
+            sadece React ekosistemindeki son gelişmeler hakkında sohbet etmekten
+            memnuniyet duyarım. Sana uygun kanalı seç.
           </p>
         </div>
       </section>
 
       <Section
-        eyebrow="Channels"
+        eyebrow="Kanallar"
         title={
           <>
-            Six ways to <span className="text-gradient">say hi</span>
+            <span className="text-gradient">Merhaba demenin</span> altı yolu
           </>
         }
       >
@@ -111,37 +111,37 @@ export default function ContactPage() {
       </Section>
 
       <Section
-        eyebrow="Best fit"
+        eyebrow="En uygun işler"
         title={
           <>
-            A good fit{" "}
-            <span className="text-gradient">for working with me</span>
+            Benimle çalışmak için{" "}
+            <span className="text-gradient">ideal işler</span>
           </>
         }
-        description="Some of the work I'd love to take on, and what to expect when we collaborate."
+        description="Üstlenmeyi çok istediğim işlerden bazıları ve birlikte çalıştığımızda neler bekleyebileceğin."
       >
         <div className="grid gap-5 md:grid-cols-2">
           {[
             {
-              title: "Next.js + Payload migrations",
-              text: "Moving from a legacy CMS or .NET MVC into a modern App Router + Payload setup. I've done it for travel and advisory clients.",
+              title: "Next.js + Payload geçişleri",
+              text: "Legacy bir CMS veya .NET MVC'den modern bir App Router + Payload kurulumuna geçiş. Bunu seyahat ve danışmanlık müşterileri için yaptım.",
             },
             {
-              title: "Multi-tenant frontends",
-              text: "One codebase, many brands. Locale-aware routes, theme tokens per tenant, and content workflows your editors actually enjoy.",
+              title: "Multi-tenant frontend'ler",
+              text: "Tek kod tabanı, birçok marka. Dile duyarlı route'lar, tenant bazında tema token'ları ve editörlerinin gerçekten keyif alacağı içerik akışları.",
             },
             {
-              title: "Travel & booking products",
-              text: "Search, listings, detail pages, payment flows, 3D-secure, partial payments — I've shipped all of it for live OTA brands.",
+              title: "Seyahat & rezervasyon ürünleri",
+              text: "Arama, listeleme, detay sayfaları, ödeme akışları, 3D Secure, kısmi ödemeler — hepsini canlı OTA markaları için geliştirdim.",
             },
             {
-              title: "Polished frontends",
-              text: "Mobile-first, accessible, motion-aware UIs that feel calm and fast — not chaotic and animated for the sake of it.",
+              title: "Özenli frontend'ler",
+              text: "Sakin ve hızlı hissettiren mobile-first, erişilebilir, hareketi bilinçli kullanan arayüzler — sırf animasyon olsun diye kaotik olanlar değil.",
             },
           ].map((c) => (
             <div key={c.title} className="card p-6">
               <div className="mb-3 font-mono text-[11px] uppercase tracking-[0.14em] text-accent">
-                Good fit
+                Uygun iş
               </div>
               <h3 className="font-display text-lg font-medium text-neutral-900">
                 {c.title}

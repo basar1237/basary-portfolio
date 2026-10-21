@@ -30,7 +30,7 @@ export default function HomeHero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
               <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent" />
             </span>
-            Available for select work
+            Seçili projelere açığım
           </motion.div>
 
           <motion.h1
@@ -50,8 +50,8 @@ export default function HomeHero() {
             variants={fadeUp}
             className="mt-4 font-display text-xl font-medium leading-snug tracking-tight text-neutral-400 md:text-2xl"
           >
-            Frontend engineer crafting modern,{" "}
-            <span className="text-neutral-900">production-grade web products.</span>
+            Modern ve{" "}
+            <span className="text-neutral-900">canlıya hazır web ürünleri geliştiren frontend mühendisi.</span>
           </motion.p>
 
           <motion.p
@@ -61,10 +61,10 @@ export default function HomeHero() {
             variants={fadeUp}
             className="mt-6 max-w-xl text-base leading-relaxed text-neutral-500"
           >
-            I build production travel &amp; booking platforms at{" "}
-            <span className="font-medium text-neutral-800">Lidya Teknoloji</span> —
-            multi-tenant Next.js + Payload CMS apps, .NET MVC OTA sites, and a long
-            tail of jQuery + Bootstrap brand templates.
+            <span className="font-medium text-neutral-800">Lidya Teknoloji</span>&apos;de
+            canlı seyahat &amp; rezervasyon platformları geliştiriyorum —
+            multi-tenant Next.js + Payload CMS uygulamaları, .NET MVC OTA siteleri
+            ve uzun bir jQuery + Bootstrap marka şablonları listesi.
           </motion.p>
 
           <motion.div
@@ -75,11 +75,11 @@ export default function HomeHero() {
             className="mt-8 flex flex-wrap items-center gap-3"
           >
             <Link href="/projects" className="btn btn-primary group">
-              View my work
+              İşlerimi incele
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
             <Link href="/contact" className="btn btn-secondary">
-              Get in touch
+              İletişime geç
             </Link>
           </motion.div>
 
@@ -175,7 +175,7 @@ function Terminal() {
         </div>
         <div className="flex items-center gap-2 text-neutral-300">
           <span className="h-1.5 w-1.5 rounded-full bg-[#27c93f]" />
-          shipping production
+          canlıya ürün çıkarıyor
           <span className="ml-0.5 inline-block h-4 w-[7px] animate-pulse bg-neutral-500 align-middle" />
         </div>
       </div>

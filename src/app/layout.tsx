@@ -8,19 +8,19 @@ import Clarity from "@/components/Clarity";
 import { profile } from "@/data/profile";
 
 const inter = Inter({
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   variable: "--font-inter",
   display: "swap",
 });
 
 const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   variable: "--font-space-grotesk",
   display: "swap",
 });
 
 const jetbrains = JetBrains_Mono({
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   variable: "--font-jetbrains",
   display: "swap",
 });
@@ -42,7 +42,7 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="en"
+      lang="tr"
       className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrains.variable} scroll-px-safe`}
     >
       <body className="relative min-h-screen overflow-x-hidden bg-white text-neutral-800 antialiased">

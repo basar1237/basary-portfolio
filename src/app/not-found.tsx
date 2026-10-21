@@ -8,14 +8,14 @@ export default function NotFound() {
           404
         </p>
         <h1 className="mt-3 font-display text-5xl font-semibold tracking-tight text-neutral-900 md:text-7xl">
-          Page not <span className="text-gradient">found.</span>
+          Sayfa <span className="text-gradient">bulunamadı.</span>
         </h1>
         <p className="mx-auto mt-4 max-w-md text-neutral-500">
-          The page you&apos;re after doesn&apos;t exist — but the homepage is a
-          single click away.
+          Aradığın sayfa mevcut değil — ama ana sayfa sadece bir tık
+          uzağında.
         </p>
         <Link href="/" className="btn btn-primary mt-8">
-          Take me home
+          Ana sayfaya dön
         </Link>
       </div>
     </section>

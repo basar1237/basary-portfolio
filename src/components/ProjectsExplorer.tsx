@@ -80,7 +80,7 @@ export default function ProjectsExplorer({
 
       {list.length === 0 && (
         <div className="card p-10 text-center text-sm text-neutral-500">
-          No projects in this category — yet.
+          Bu kategoride henüz proje yok.
         </div>
       )}
     </div>

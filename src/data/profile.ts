@@ -1,8 +1,8 @@
 export const profile = {
   name: "Başar Yıldırım",
-  role: "Frontend Engineer & AI Engineer",
-  tagline: "Modern web at scale — React, Next.js, Payload CMS — built with AI-driven workflows.",
-  location: "Istanbul, Türkiye",
+  role: "Frontend & AI Mühendisi",
+  tagline: "Ölçeklenebilir modern web — React, Next.js, Payload CMS — yapay zekâ destekli süreçlerle.",
+  location: "İstanbul, Türkiye",
   email: "basary@lidyateknoloji.com",
   altEmail: "basaryldrm1237@gmail.com",
   phone: "+90 546 531 49 10",
@@ -10,13 +10,13 @@ export const profile = {
   birthplace: "Osmaniye, Türkiye",
   company: "Lidya Teknoloji",
   startedAt: 2024,
-  bio: `Frontend engineer focused on building fast, accessible, multi-tenant web platforms.
-At Lidya Teknoloji I ship production travel & booking products used across Turkey and the MENA region —
-flights, hotels, buses, car rentals, transfers and tours. I work daily with React, Next.js, TypeScript and
-Payload CMS, and I've shipped everything from classic .NET MVC + jQuery template sites to a modern
-Next.js + Payload tenant monorepo. Alongside frontend work I build AI-powered products end to end —
-LLM integrations, voice agents and agentic development workflows with Claude Code at the center of
-how I plan, build, test and ship.`,
+  bio: `Hızlı, erişilebilir ve multi-tenant web platformları geliştirmeye odaklanan bir frontend mühendisiyim.
+Lidya Teknoloji'de Türkiye ve MENA bölgesinde kullanılan canlı seyahat & rezervasyon ürünleri geliştiriyorum —
+uçak, otel, otobüs, araç kiralama, transfer ve turlar. Her gün React, Next.js, TypeScript ve Payload CMS ile
+çalışıyorum; klasik .NET MVC + jQuery şablon sitelerinden modern bir Next.js + Payload tenant monoreposuna
+kadar pek çok şeyi yayına aldım. Frontend işlerinin yanında yapay zekâ destekli ürünleri de uçtan uca
+geliştiriyorum — LLM entegrasyonları, sesli asistanlar ve planlama, geliştirme, test ve yayına alma
+süreçlerimin merkezinde Claude Code olan agentic geliştirme akışları.`,
 } as const;
 
 export const socials = {

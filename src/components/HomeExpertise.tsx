@@ -9,13 +9,13 @@ export default function HomeExpertise() {
   return (
     <section className="relative mx-auto max-w-6xl px-5 py-20">
       <div className="mb-12 max-w-3xl">
-        <div className="eyebrow mb-4">Skills</div>
+        <div className="eyebrow mb-4">Yetenekler</div>
         <h2 className="font-display text-3xl font-semibold leading-tight tracking-tight text-neutral-900 md:text-[2.6rem]">
-          Tools I reach for{" "}
-          <span className="text-gradient">every day</span>
+          <span className="text-gradient">Her gün</span>{" "}
+          kullandığım araçlar
         </h2>
         <p className="mt-4 text-base leading-relaxed text-neutral-500">
-          A curated subset of the stack — full list lives on the About page.
+          Kullandığım teknolojilerden bir seçki — tam liste Hakkımda sayfasında.
         </p>
       </div>
 

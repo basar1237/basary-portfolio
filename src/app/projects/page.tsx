@@ -5,9 +5,9 @@ import ProjectsExplorer from "@/components/ProjectsExplorer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Projects — ${profile.name}`,
+  title: `Projeler — ${profile.name}`,
   description:
-    "Real production work across travel, booking, advisory and template platforms.",
+    "Seyahat, rezervasyon, danışmanlık ve şablon platformlarında canlıdaki gerçek işler.",
 };
 
 export default function ProjectsPage() {
@@ -15,26 +15,26 @@ export default function ProjectsPage() {
     <>
       <section className="relative">
         <div className="relative mx-auto max-w-6xl px-5 pb-10 pt-20 md:pt-28">
-          <div className="eyebrow mb-5">Projects</div>
+          <div className="eyebrow mb-5">Projeler</div>
           <h1 className="max-w-3xl font-display text-4xl font-semibold leading-[1.08] tracking-tight text-neutral-900 md:text-6xl">
-            {projects.length} real projects,{" "}
-            <span className="text-gradient">in production.</span>
+            {projects.length} gerçek proje,{" "}
+            <span className="text-gradient">canlıda.</span>
           </h1>
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-500 md:text-lg">
-            A curated tour of the things I&apos;ve actually shipped — from the
-            modern Lidya Travel multi-tenant platform on Next.js + Payload, down
-            to the legacy ASP.NET MVC + jQuery brand sites that still book real
-            trips every day.
+            Gerçekten yayına aldığım işlerden seçkin bir tur — Next.js + Payload
+            üzerindeki modern Lidya Travel multi-tenant platformundan, her gün
+            hâlâ gerçek seyahat rezervasyonu alan legacy ASP.NET MVC + jQuery
+            marka sitelerine kadar.
           </p>
         </div>
       </section>
 
       <Section
-        eyebrow="The portfolio"
+        eyebrow="Portföy"
         title={
           <>
-            Filter by{" "}
-            <span className="text-gradient">what you care about</span>
+            <span className="text-gradient">İlgilendiğin alana</span>{" "}
+            göre filtrele
           </>
         }
       >

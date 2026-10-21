@@ -5,28 +5,28 @@ import { profile } from "@/data/profile";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Experience — ${profile.name}`,
-  description: "Career timeline, education and certifications.",
+  title: `Deneyim — ${profile.name}`,
+  description: "Kariyer zaman çizelgesi, eğitim ve sertifikalar.",
 };
 
 const work = [
   {
-    role: "Frontend Engineer & AI Engineer",
+    role: "Frontend & AI Mühendisi",
     company: "Lidya Teknoloji",
-    location: "Istanbul, Türkiye",
-    period: `${profile.startedAt} – Present`,
-    type: "Full-time",
+    location: "İstanbul, Türkiye",
+    period: `${profile.startedAt} – Günümüz`,
+    type: "Tam zamanlı",
     summary:
-      "Owning UI work across Lidya's travel & booking portfolio — from a multi-tenant Next.js + Payload CMS platform down to legacy ASP.NET MVC + jQuery template sites that still serve real bookings — while running an AI-first development workflow built on Claude Code.",
+      "Lidya'nın seyahat & rezervasyon portföyündeki arayüz işlerinin sorumluluğu — multi-tenant Next.js + Payload CMS platformundan hâlâ gerçek rezervasyonlara hizmet eden legacy ASP.NET MVC + jQuery şablon sitelerine kadar — ve bunu Claude Code üzerine kurulu, yapay zekâ öncelikli bir geliştirme süreciyle yürütmek.",
     bullets: [
-      "Adopted Claude Code as the core development workflow: agentic planning, implementation, code review and test automation with MCP integrations and custom subagents.",
-      "Built LLM-powered products end to end: a real-time phone voice agent (Vapi + Claude), an AI stock-analysis app for Borsa İstanbul (Next.js + FastAPI) and AI modules inside an ERP product.",
-      "Built tenant-app routes in the Lidya Travel Next.js monorepo (App Router, [locale]/hotel, search-results, slug pages).",
-      "Modeled Payload CMS collections, blocks and live preview wired into the tenant frontend.",
-      "Shipped UI for production OTA brands: Fulltrip, Parafly Travel, Gezibank, YKM Turizm, Denizle Seyahat, Salam Booking, İrem Tour, Pronto Tatil, Troyecar.",
-      "Built and maintained Angular/Bootstrap/jQuery template repositories used as the static design source for those brands.",
-      "Worked on the Consilium UK risk-advisory marketing site on the same Next.js + Payload stack.",
-      "Tuned performance, SEO, redirects, sitemaps and i18n content workflows for editor teams.",
+      "Claude Code'u temel geliştirme süreci olarak benimsedim: MCP entegrasyonları ve özel subagent'larla agentic planlama, geliştirme, kod incelemesi ve test otomasyonu.",
+      "LLM tabanlı ürünleri uçtan uca geliştirdim: gerçek zamanlı bir telefon sesli asistanı (Vapi + Claude), Borsa İstanbul için yapay zekâ destekli bir hisse analiz uygulaması (Next.js + FastAPI) ve bir ERP ürünü içinde yapay zekâ modülleri.",
+      "Lidya Travel Next.js monoreposunda tenant uygulamasının route'larını geliştirdim (App Router, [locale]/hotel, search-results, slug sayfaları).",
+      "Tenant frontend'ine bağlı Payload CMS collection'larını, block'larını ve canlı önizlemesini modelledim.",
+      "Canlıdaki OTA markalarının arayüzlerini geliştirdim: Fulltrip, Parafly Travel, Gezibank, YKM Turizm, Denizle Seyahat, Salam Booking, İrem Tour, Pronto Tatil, Troyecar.",
+      "Bu markaların statik tasarım kaynağı olarak kullanılan Angular/Bootstrap/jQuery şablon repolarını geliştirdim ve bakımını yaptım.",
+      "Aynı Next.js + Payload altyapısı üzerindeki Consilium (İngiltere) risk danışmanlığı tanıtım sitesinde çalıştım.",
+      "Editör ekipleri için performans, SEO, yönlendirmeler, sitemap'ler ve i18n içerik akışlarını iyileştirdim.",
     ],
     stack: [
       "Next.js",
@@ -53,42 +53,42 @@ const work = [
 
 const education = [
   {
-    title: "Software Engineering, B.Sc.",
-    school: "Beykent University",
-    location: "Istanbul, Türkiye",
+    title: "Yazılım Mühendisliği, Lisans",
+    school: "Beykent Üniversitesi",
+    location: "İstanbul, Türkiye",
     period: "2020 – 2024",
     bullets: [
-      "Four-year software engineering program",
-      "Data structures, algorithms & databases",
-      "Web technologies, distributed systems",
-      "Software methodologies & project work",
+      "Dört yıllık yazılım mühendisliği programı",
+      "Veri yapıları, algoritmalar & veritabanları",
+      "Web teknolojileri, dağıtık sistemler",
+      "Yazılım metodolojileri & proje çalışmaları",
     ],
     achievements: [
-      "Graduated successfully",
-      "Project-based learning",
-      "Teamwork & technical leadership",
+      "Başarıyla mezun oldum",
+      "Proje tabanlı öğrenme",
+      "Takım çalışması & teknik liderlik",
     ],
   },
 ];
 
 const certifications = [
   {
-    title: "React Developer",
+    title: "React Geliştirici",
     issuer: "Meta",
     date: "2023",
-    description: "Modern React application development.",
+    description: "Modern React uygulama geliştirme.",
   },
   {
-    title: "TypeScript Fundamentals",
+    title: "TypeScript Temelleri",
     issuer: "Microsoft",
     date: "2023",
-    description: "TypeScript core and advanced topics.",
+    description: "TypeScript temel ve ileri seviye konular.",
   },
   {
-    title: "Web Development",
+    title: "Web Geliştirme",
     issuer: "Udemy",
     date: "2022",
-    description: "Modern web development technologies.",
+    description: "Modern web geliştirme teknolojileri.",
   },
 ];
 
@@ -97,24 +97,24 @@ export default function ExperiencePage() {
     <>
       <section className="relative">
         <div className="relative mx-auto max-w-6xl px-5 pb-10 pt-20 md:pt-28">
-          <div className="eyebrow mb-5">Experience</div>
+          <div className="eyebrow mb-5">Deneyim</div>
           <h1 className="max-w-3xl font-display text-4xl font-semibold leading-[1.08] tracking-tight text-neutral-900 md:text-6xl">
-            The career,{" "}
-            <span className="text-gradient">timeline-style.</span>
+            Kariyerim,{" "}
+            <span className="text-gradient">zaman çizelgesiyle.</span>
           </h1>
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-500 md:text-lg">
-            Where I&apos;ve shipped production code, what I learned along the
-            way, and the certifications that came with it.
+            Canlıya kod gönderdiğim yerler, bu yolda öğrendiklerim ve beraberinde
+            gelen sertifikalar.
           </p>
         </div>
       </section>
 
       <Section
-        eyebrow="Work"
+        eyebrow="İş"
         title={
           <>
-            Companies I&apos;ve{" "}
-            <span className="text-gradient">shipped with</span>
+            Birlikte{" "}
+            <span className="text-gradient">ürün çıkardığım şirketler</span>
           </>
         }
       >
@@ -154,7 +154,7 @@ export default function ExperiencePage() {
 
               <div className="mt-5">
                 <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-neutral-400">
-                  Responsibilities
+                  Sorumluluklar
                 </div>
                 <ul className="mt-2 grid gap-1.5 text-sm text-neutral-700 md:grid-cols-2">
                   {w.bullets.map((b) => (
@@ -168,7 +168,7 @@ export default function ExperiencePage() {
 
               <div className="mt-5 border-t border-neutral-100 pt-4">
                 <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-neutral-400">
-                  Stack
+                  Teknolojiler
                 </div>
                 <div className="mt-2 flex flex-wrap gap-1.5">
                   {w.stack.map((s) => (
@@ -187,10 +187,10 @@ export default function ExperiencePage() {
       </Section>
 
       <Section
-        eyebrow="Education"
+        eyebrow="Eğitim"
         title={
           <>
-            Where it <span className="text-gradient">started</span>
+            Her şeyin <span className="text-gradient">başladığı yer</span>
           </>
         }
       >
@@ -222,7 +222,7 @@ export default function ExperiencePage() {
               <div className="mt-5 grid gap-5 md:grid-cols-2">
                 <div>
                   <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-neutral-400">
-                    Coursework
+                    Dersler
                   </div>
                   <ul className="mt-2 space-y-1.5 text-sm text-neutral-700">
                     {e.bullets.map((b) => (
@@ -235,7 +235,7 @@ export default function ExperiencePage() {
                 </div>
                 <div>
                   <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-neutral-400">
-                    Achievements
+                    Başarılar
                   </div>
                   <ul className="mt-2 space-y-1.5 text-sm text-neutral-700">
                     {e.achievements.map((a) => (
@@ -253,10 +253,10 @@ export default function ExperiencePage() {
       </Section>
 
       <Section
-        eyebrow="Certifications"
+        eyebrow="Sertifikalar"
         title={
           <>
-            Continuous <span className="text-gradient">learning</span>
+            Sürekli <span className="text-gradient">öğrenme</span>
           </>
         }
       >

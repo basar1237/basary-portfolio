@@ -6,8 +6,8 @@ import AboutSkillsGrid from "@/components/AboutSkillsGrid";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `About — ${profile.name}`,
-  description: `About ${profile.name} — ${profile.role} at ${profile.company}.`,
+  title: `Hakkımda — ${profile.name}`,
+  description: `${profile.name} hakkında — ${profile.company} bünyesinde ${profile.role}.`,
 };
 
 export default function AboutPage() {
@@ -17,11 +17,10 @@ export default function AboutPage() {
     <>
       <section className="relative">
         <div className="relative mx-auto max-w-6xl px-5 pb-10 pt-20 md:pt-28">
-          <div className="eyebrow mb-5">About me</div>
+          <div className="eyebrow mb-5">Hakkımda</div>
           <h1 className="max-w-3xl font-display text-4xl font-semibold leading-[1.08] tracking-tight text-neutral-900 md:text-6xl">
-            A short story about{" "}
-            <span className="text-gradient">who I am</span> and what I love
-            building.
+            <span className="text-gradient">Kim olduğum</span> ve geliştirmeyi
+            sevdiğim şeyler üzerine kısa bir hikâye.
           </h1>
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-neutral-500 md:text-lg">
             {profile.bio}
@@ -30,19 +29,19 @@ export default function AboutPage() {
       </section>
 
       <Section
-        eyebrow="Personal info"
+        eyebrow="Kişisel bilgiler"
         title={
           <>
-            The basics <span className="text-gradient">at a glance</span>
+            Temel bilgiler <span className="text-gradient">bir bakışta</span>
           </>
         }
       >
         <div className="grid gap-px overflow-hidden rounded-xl border border-neutral-200 bg-neutral-200 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { icon: Calendar, label: "Born", value: `${profile.birthYear}` },
-            { icon: MapPin, label: "Birthplace", value: profile.birthplace },
-            { icon: Phone, label: "Phone", value: profile.phone },
-            { icon: Mail, label: "Email", value: profile.email },
+            { icon: Calendar, label: "Doğum yılı", value: `${profile.birthYear}` },
+            { icon: MapPin, label: "Doğum yeri", value: profile.birthplace },
+            { icon: Phone, label: "Telefon", value: profile.phone },
+            { icon: Mail, label: "E-posta", value: profile.email },
           ].map((item) => (
             <div key={item.label} className="bg-white p-6">
               <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-neutral-200 text-neutral-700">
@@ -60,11 +59,11 @@ export default function AboutPage() {
       </Section>
 
       <Section
-        eyebrow="Story so far"
+        eyebrow="Bugüne kadar"
         title={
           <>
-            From Osmaniye to{" "}
-            <span className="text-gradient">production travel UI</span>
+            Osmaniye&apos;den{" "}
+            <span className="text-gradient">canlı seyahat arayüzlerine</span>
           </>
         }
       >
@@ -74,16 +73,16 @@ export default function AboutPage() {
               <GraduationCap className="h-5 w-5" />
             </div>
             <h3 className="mt-4 font-display text-xl font-medium text-neutral-900">
-              Software Engineering — Beykent University
+              Yazılım Mühendisliği — Beykent Üniversitesi
             </h3>
             <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.14em] text-neutral-400">
-              Istanbul · 2020 – 2024
+              İstanbul · 2020 – 2024
             </p>
             <p className="mt-3 text-sm leading-relaxed text-neutral-600">
-              Four years of computer science, software engineering, data
-              structures, algorithms and web technologies. Graduated with a
-              strong project-based foundation and a real love for the web
-              platform.
+              Bilgisayar bilimi, yazılım mühendisliği, veri yapıları,
+              algoritmalar ve web teknolojileri üzerine dört yıl. Proje odaklı
+              sağlam bir temel ve web platformuna gerçek bir tutkuyla mezun
+              oldum.
             </p>
           </article>
 
@@ -92,30 +91,30 @@ export default function AboutPage() {
               <Briefcase className="h-5 w-5" />
             </div>
             <h3 className="mt-4 font-display text-xl font-medium text-neutral-900">
-              Frontend Engineer — Lidya Teknoloji
+              Frontend & AI Mühendisi — Lidya Teknoloji
             </h3>
             <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.14em] text-neutral-400">
-              Istanbul · {profile.startedAt} – Present · {yearsAtLidya}+ years
+              İstanbul · {profile.startedAt} – Günümüz · {yearsAtLidya}+ yıl
             </p>
             <p className="mt-3 text-sm leading-relaxed text-neutral-600">
-              At Lidya I work across the company&apos;s travel and booking
-              brands — from .NET MVC + jQuery template sites to a modern Next.js
-              + Payload CMS multi-tenant platform. I ship UI for flights,
-              hotels, buses, transfers and tour products used by real travelers
-              every day.
+              Lidya&apos;da şirketin seyahat ve rezervasyon markalarının
+              tamamında çalışıyorum — .NET MVC + jQuery şablon sitelerinden
+              modern Next.js + Payload CMS multi-tenant platformuna kadar. Her
+              gün gerçek yolcuların kullandığı uçak, otel, otobüs, transfer ve
+              tur ürünlerinin arayüzlerini geliştiriyorum.
             </p>
           </article>
         </div>
       </Section>
 
       <Section
-        eyebrow="AI Engineering"
+        eyebrow="Yapay Zeka Mühendisliği"
         title={
           <>
-            Building <span className="text-gradient">with and for AI</span>
+            <span className="text-gradient">Yapay zekâ ile ve yapay zekâ için</span> geliştirmek
           </>
         }
-        description="AI isn't a side interest — it's how I work and what I build. Claude Code sits at the center of my development workflow, and LLM-powered products are a growing part of what I ship."
+        description="Yapay zekâ benim için bir yan ilgi değil — hem çalışma biçimim hem de geliştirdiğim şey. Claude Code geliştirme sürecimin merkezinde yer alıyor ve LLM tabanlı ürünler, yayına aldığım işlerin giderek büyüyen bir parçası."
       >
         <div className="grid gap-5 lg:grid-cols-3">
           <article className="card p-6">
@@ -123,14 +122,15 @@ export default function AboutPage() {
               <Workflow className="h-5 w-5" />
             </div>
             <h3 className="mt-4 font-display text-xl font-medium text-neutral-900">
-              Agentic development with Claude Code
+              Claude Code ile agentic geliştirme
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-neutral-600">
-              My daily workflow runs on Claude Code: planning architecture,
-              implementing features with parallel agents, automated code review
-              and test loops. I extend it with MCP servers, custom subagents
-              and hooks — turning ideas into shipped, full-stack products fast,
-              as a one-person team.
+              Günlük iş akışım Claude Code üzerinde ilerliyor: mimari
+              planlama, paralel agent&apos;larla özellik geliştirme, otomatik
+              kod incelemesi ve test döngüleri. Bunu MCP sunucuları, özel
+              subagent&apos;lar ve hook&apos;larla genişletiyorum — tek kişilik
+              bir ekip olarak fikirleri hızla canlıdaki full-stack ürünlere
+              dönüştürüyorum.
             </p>
           </article>
 
@@ -139,14 +139,15 @@ export default function AboutPage() {
               <Bot className="h-5 w-5" />
             </div>
             <h3 className="mt-4 font-display text-xl font-medium text-neutral-900">
-              LLM-powered products
+              LLM tabanlı ürünler
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-neutral-600">
-              I&apos;ve built a real-time phone voice agent (Vapi + Claude with
-              calendar &amp; email integrations), an AI stock-analysis web app
-              for Borsa İstanbul (Next.js + FastAPI + LLM), and AI-assisted
-              modules inside a wholesale-market ERP — all designed, built and
-              shipped end to end.
+              Gerçek zamanlı bir telefon sesli asistanı (takvim &amp; e-posta
+              entegrasyonlu Vapi + Claude), Borsa İstanbul için yapay zekâ
+              destekli bir hisse analiz web uygulaması (Next.js + FastAPI + LLM)
+              ve bir hal (toptan satış) ERP&apos;si içinde yapay zekâ destekli
+              modüller geliştirdim — hepsini uçtan uca tasarlayıp, geliştirip
+              yayına aldım.
             </p>
           </article>
 
@@ -155,37 +156,39 @@ export default function AboutPage() {
               <Sparkles className="h-5 w-5" />
             </div>
             <h3 className="mt-4 font-display text-xl font-medium text-neutral-900">
-              How it&apos;s done
+              Nasıl yapıyorum
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-neutral-600">
-              Prompt engineering and agent design, tool use (function calling),
-              structured outputs, RAG pipelines and streaming UX. I treat
-              prompts and agent configs like code — versioned, tested and
-              iterated — so AI features behave predictably in production.
+              Prompt mühendisliği ve agent tasarımı, tool use (function
+              calling), yapılandırılmış çıktılar, RAG pipeline&apos;ları ve
+              streaming deneyimi. Prompt&apos;ları ve agent yapılandırmalarını
+              kod gibi ele alıyorum — versiyonlanmış, test edilmiş ve
+              iyileştirilmiş — böylece yapay zekâ özellikleri canlıda
+              öngörülebilir şekilde çalışıyor.
             </p>
           </article>
         </div>
       </Section>
 
       <Section
-        eyebrow="Skills"
+        eyebrow="Yetenekler"
         title={
           <>
-            The full toolkit{" "}
-            <span className="text-gradient">behind the work</span>
+            İşlerin arkasındaki{" "}
+            <span className="text-gradient">tüm araç seti</span>
           </>
         }
-        description="I split my day between React/Next.js for new product work, Payload CMS for content modeling, and a healthy amount of legacy ASP.NET MVC + jQuery for the brands that still run on the original Lidya stack."
+        description="Günümü yeni ürün geliştirme için React/Next.js, içerik modelleme için Payload CMS ve hâlâ orijinal Lidya altyapısında çalışan markalar için azımsanmayacak miktarda legacy ASP.NET MVC + jQuery arasında bölüyorum."
       >
         <AboutSkillsGrid skills={skills} />
       </Section>
 
       <Section
-        eyebrow="Outside the IDE"
+        eyebrow="IDE dışında"
         title={
           <>
-            What I do{" "}
-            <span className="text-gradient">when I&apos;m not coding</span>
+            <span className="text-gradient">Kod yazmadığım zamanlarda</span>{" "}
+            neler yaparım
           </>
         }
       >
@@ -195,12 +198,12 @@ export default function AboutPage() {
               <Coffee className="h-5 w-5" />
             </div>
             <h3 className="mt-4 font-display text-xl font-medium text-neutral-900">
-              Always learning
+              Sürekli öğrenmek
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-neutral-600">
-              I read up on the React ecosystem, follow Next.js / Payload
-              releases closely, and like exploring data-science side projects in
-              Python and R when I have spare cycles.
+              React ekosistemini takip ediyor, Next.js / Payload sürümlerini
+              yakından izliyorum; boş vakit bulduğumda Python ve R ile veri
+              bilimi yan projelerini keşfetmeyi seviyorum.
             </p>
           </div>
           <div className="card p-6">
@@ -208,12 +211,12 @@ export default function AboutPage() {
               <Heart className="h-5 w-5" />
             </div>
             <h3 className="mt-4 font-display text-xl font-medium text-neutral-900">
-              Craft &amp; details
+              Zanaat &amp; detaylar
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-neutral-600">
-              I care a lot about the small things — micro-interactions, type,
-              color and motion that quietly make a product feel right. The kind
-              of polish you only notice when it&apos;s missing.
+              Küçük şeyleri çok önemsiyorum — bir ürünü sessizce doğru
+              hissettiren mikro etkileşimler, tipografi, renk ve hareket. Ancak
+              eksik olduğunda fark ettiğin türden bir cila.
             </p>
           </div>
         </div>

@@ -36,7 +36,7 @@ export default function Footer() {
               <a
                 href={socials.email}
                 className="rounded-md border border-neutral-200 bg-white p-2 text-neutral-500 transition-colors hover:border-accent hover:text-accent"
-                aria-label="Email"
+                aria-label="E-posta"
               >
                 <Mail className="h-4 w-4" />
               </a>
@@ -45,15 +45,15 @@ export default function Footer() {
 
           <div>
             <h4 className="font-mono text-[11px] uppercase tracking-[0.16em] text-neutral-400">
-              Sitemap
+              Site haritası
             </h4>
             <ul className="mt-4 space-y-2.5 text-sm">
               {[
-                { href: "/", label: "Home" },
-                { href: "/about", label: "About" },
-                { href: "/experience", label: "Experience" },
-                { href: "/projects", label: "Projects" },
-                { href: "/contact", label: "Contact" },
+                { href: "/", label: "Ana Sayfa" },
+                { href: "/about", label: "Hakkımda" },
+                { href: "/experience", label: "Deneyim" },
+                { href: "/projects", label: "Projeler" },
+                { href: "/contact", label: "İletişim" },
               ].map((l) => (
                 <li key={l.href}>
                   <Link
@@ -69,7 +69,7 @@ export default function Footer() {
 
           <div>
             <h4 className="font-mono text-[11px] uppercase tracking-[0.16em] text-neutral-400">
-              Reach me
+              Bana ulaş
             </h4>
             <ul className="mt-4 space-y-2.5 text-sm text-neutral-600">
               <li className="flex items-center gap-2">
@@ -91,10 +91,10 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col items-start justify-between gap-2 border-t border-neutral-200 pt-6 text-xs text-neutral-400 md:flex-row md:items-center">
           <span>
-            © {new Date().getFullYear()} {profile.name}. Built with Next.js &amp;
-            Tailwind.
+            © {new Date().getFullYear()} {profile.name}. Next.js &amp; Tailwind
+            ile geliştirildi.
           </span>
-          <span>Designed and shipped from Istanbul.</span>
+          <span>İstanbul&apos;da tasarlandı ve yayına alındı.</span>
         </div>
       </div>
     </footer>

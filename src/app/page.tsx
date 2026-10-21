@@ -56,14 +56,14 @@ export default function HomePage() {
       <HomeExpertise />
 
       <Section
-        eyebrow="Featured work"
+        eyebrow="Öne çıkan işler"
         title={
           <>
-            A few things I&apos;ve{" "}
-            <span className="text-gradient">shipped recently</span>
+            Son dönemde{" "}
+            <span className="text-gradient">yayına aldıklarım</span>
           </>
         }
-        description="From a Next.js + Payload multi-tenant travel platform to a UK-based risk advisory site, here are some highlights from production."
+        description="Next.js + Payload tabanlı multi-tenant bir seyahat platformundan İngiltere merkezli bir risk danışmanlığı sitesine kadar, canlıdaki işlerimden bazı öne çıkanlar."
       >
         <div className="grid gap-5 md:grid-cols-2">
           {featured.map((p) => (
@@ -75,53 +75,53 @@ export default function HomePage() {
             href="/projects"
             className="group inline-flex items-center gap-2 text-sm font-medium text-neutral-900 transition-colors hover:text-accent"
           >
-            See all {projects.length} projects
+            {projects.length} projenin tamamını gör
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
         </div>
       </Section>
 
       <Section
-        eyebrow="Capabilities"
+        eyebrow="Yetkinlikler"
         title={
           <>
-            React-first, but happy{" "}
-            <span className="text-gradient">deep in the stack</span>
+            Önceliğim React, ama{" "}
+            <span className="text-gradient">stack'in derinlerinde de rahatım</span>
           </>
         }
-        description="A snapshot of the tech I reach for to ship product."
+        description="Ürün geliştirirken başvurduğum teknolojilere kısa bir bakış."
       >
         <div className="grid gap-px overflow-hidden rounded-xl border border-neutral-200 bg-neutral-200 sm:grid-cols-2 lg:grid-cols-3">
           {[
             {
               icon: Code2,
               title: "React & Next.js",
-              text: "App Router, Server Components, Suspense, ISR. I treat performance and accessibility as features, not afterthoughts.",
+              text: "App Router, Server Components, Suspense, ISR. Performans ve erişilebilirliği sonradan akla gelen detaylar değil, birer özellik olarak görüyorum.",
             },
             {
               icon: Layers3,
               title: "Payload CMS",
-              text: "Collections, blocks, layout-builder, live preview, and on-demand revalidation across multi-tenant brands.",
+              text: "Multi-tenant markalarda collection'lar, block'lar, layout builder, canlı önizleme ve on-demand revalidation.",
             },
             {
               icon: Database,
               title: ".NET & APIs",
-              text: "Years on ASP.NET Core MVC + Razor for OTA platforms — flights, hotels, buses, payment, 3D-secure flows.",
+              text: "OTA platformlarında yıllarca ASP.NET Core MVC + Razor — uçak, otel, otobüs, ödeme ve 3D Secure akışları.",
             },
             {
               icon: Globe2,
-              title: "Multi-tenant UI",
-              text: "Same monorepo, many brands. Locale-aware routes, theming and content per tenant.",
+              title: "Multi-tenant Arayüz",
+              text: "Tek monorepo, birçok marka. Dile duyarlı route'lar, tenant bazında tema ve içerik.",
             },
             {
               icon: Smartphone,
-              title: "Responsive UX",
-              text: "Mobile-first layouts, accessible forms, motion that adds clarity instead of noise.",
+              title: "Responsive Deneyim",
+              text: "Mobile-first yerleşimler, erişilebilir formlar, gürültü değil netlik katan animasyonlar.",
             },
             {
               icon: Cpu,
-              title: "Data & Analytics",
-              text: "Comfortable with Python, Pandas and scikit-learn for analysis and reporting work on the side.",
+              title: "Veri & Analitik",
+              text: "Yan projelerde analiz ve raporlama için Python, Pandas ve scikit-learn ile rahat çalışırım.",
             },
           ].map((c) => (
             <div
@@ -143,18 +143,18 @@ export default function HomePage() {
       </Section>
 
       <Section
-        eyebrow="Get in touch"
+        eyebrow="İletişime geç"
         title={
           <>
-            Have a product in mind?{" "}
-            <span className="text-gradient">Let&apos;s build it.</span>
+            Aklında bir ürün mü var?{" "}
+            <span className="text-gradient">Birlikte geliştirelim.</span>
           </>
         }
-        description="I'm always open to talking about interesting product work, freelance collaborations, and consulting on Next.js + Payload migrations."
+        description="İlginç ürün projeleri, freelance iş birlikleri ve Next.js + Payload geçişleri üzerine danışmanlık konusunda konuşmaya her zaman açığım."
       >
         <div className="flex flex-wrap gap-3">
           <Link href="/contact" className="btn btn-primary">
-            Start a conversation
+            Sohbet başlat
           </Link>
           <a href={`mailto:${profile.email}`} className="btn btn-secondary">
             {profile.email}

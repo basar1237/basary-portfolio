@@ -8,11 +8,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import cx from "@/lib/cx";
 
 const links = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/experience", label: "Experience" },
-  { href: "/projects", label: "Projects" },
-  { href: "/contact", label: "Contact" },
+  { href: "/", label: "Ana Sayfa" },
+  { href: "/about", label: "Hakkımda" },
+  { href: "/experience", label: "Deneyim" },
+  { href: "/projects", label: "Projeler" },
+  { href: "/contact", label: "İletişim" },
 ];
 
 function Wordmark() {
@@ -49,7 +49,7 @@ export default function Navbar() {
       )}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-        <Link href="/" aria-label="Home" className="flex items-center">
+        <Link href="/" aria-label="Ana Sayfa" className="flex items-center">
           <Wordmark />
         </Link>
 
@@ -78,11 +78,11 @@ export default function Navbar() {
         </nav>
 
         <Link href="/contact" className="btn btn-primary hidden md:inline-flex">
-          Let&apos;s talk
+          Konuşalım
         </Link>
 
         <button
-          aria-label="Toggle menu"
+          aria-label="Menüyü aç/kapat"
           onClick={() => setOpen((v) => !v)}
           className="rounded-md p-2 text-neutral-700 transition-colors hover:bg-neutral-100 md:hidden"
         >
@@ -122,7 +122,7 @@ export default function Navbar() {
                 href="/contact"
                 className="btn btn-primary mt-2 justify-center"
               >
-                Let&apos;s talk
+                Konuşalım
               </Link>
             </div>
           </motion.div>

@@ -37,7 +37,7 @@ export default function ProjectCard({
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 rounded-md border border-neutral-200 bg-white px-3 py-1 text-xs text-neutral-600 transition-colors hover:border-neutral-400 hover:text-neutral-900"
             >
-              Live
+              Canlı
               <ArrowUpRight className="h-3.5 w-3.5" />
             </a>
           )}
@@ -57,7 +57,7 @@ export default function ProjectCard({
           <>
             <div className="mt-6">
               <div className="mb-2 font-mono text-[11px] uppercase tracking-[0.16em] text-neutral-400">
-                What I shipped
+                Neler yaptım
               </div>
               <ul className="space-y-1.5 text-sm text-neutral-700">
                 {project.myWork.map((w) => (
@@ -72,7 +72,7 @@ export default function ProjectCard({
             {project.highlights.length > 0 && (
               <div className="mt-5">
                 <div className="mb-2 font-mono text-[11px] uppercase tracking-[0.16em] text-neutral-400">
-                  Highlights
+                  Öne çıkanlar
                 </div>
                 <ul className="grid gap-1.5 text-sm text-neutral-600 sm:grid-cols-2">
                   {project.highlights.map((h) => (
@@ -89,7 +89,7 @@ export default function ProjectCard({
 
         <div className="mt-5 border-t border-neutral-100 pt-4">
           <div className="mb-2 font-mono text-[11px] uppercase tracking-[0.16em] text-neutral-400">
-            Stack
+            Teknolojiler
           </div>
           <div className="flex flex-wrap gap-1.5">
             {project.stack.map((s) => (
