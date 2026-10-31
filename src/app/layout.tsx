@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Clarity from "@/components/Clarity";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { profile } from "@/data/profile";
 
 const inter = Inter({
@@ -54,6 +55,7 @@ export default function RootLayout({
         </div>
         <Analytics />
         <Clarity />
+        <GoogleAnalytics />
       </body>
     </html>
   );
