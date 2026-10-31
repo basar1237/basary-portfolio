@@ -6,6 +6,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Clarity from "@/components/Clarity";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import VisitTracker from "@/components/VisitTracker";
+import ConsentBanner from "@/components/ConsentBanner";
 import { profile } from "@/data/profile";
 
 const inter = Inter({
@@ -56,6 +58,8 @@ export default function RootLayout({
         <Analytics />
         <Clarity />
         <GoogleAnalytics />
+        <VisitTracker />
+        <ConsentBanner />
       </body>
     </html>
   );

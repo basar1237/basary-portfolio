@@ -54,6 +54,7 @@ export default function Footer() {
                 { href: "/experience", label: "Deneyim" },
                 { href: "/projects", label: "Projeler" },
                 { href: "/contact", label: "İletişim" },
+                { href: "/gizlilik", label: "Gizlilik ve KVKK" },
               ].map((l) => (
                 <li key={l.href}>
                   <Link
