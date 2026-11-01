@@ -2,12 +2,11 @@
 
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { getConsent, useConsent } from "@/lib/consent";
 
 /**
  * Logs page views + active time on page to /api/track (see src/lib/visitors.ts).
  * Visitor id lives in localStorage, session id in sessionStorage. Turned off
- * when the visitor rejects analytics, on /admin, and during `next dev`.
+ * on /admin and during `next dev`.
  */
 function storedId(storage: () => Storage, key: string) {
   try {
@@ -32,15 +31,9 @@ function send(data: object) {
 
 export default function VisitTracker() {
   const pathname = usePathname();
-  const denied = useConsent() === "denied";
 
   useEffect(() => {
-    if (
-      process.env.NODE_ENV !== "production" ||
-      denied ||
-      getConsent() === "denied" ||
-      pathname.startsWith("/admin")
-    ) {
+    if (process.env.NODE_ENV !== "production" || pathname.startsWith("/admin")) {
       return;
     }
 
@@ -80,7 +73,7 @@ export default function VisitTracker() {
       window.removeEventListener("pagehide", flush);
       flush();
     };
-  }, [pathname, denied]);
+  }, [pathname]);
 
   return null;
 }

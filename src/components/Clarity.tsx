@@ -1,21 +1,16 @@
-"use client";
-
 import Script from "next/script";
-import { useConsent } from "@/lib/consent";
 
 /**
  * Microsoft Clarity — session recordings & heatmaps.
  * The project id is public (it ships in client JS on every Clarity site),
  * so it's fine to hardcode a default. It can still be overridden or disabled
  * via NEXT_PUBLIC_CLARITY_ID. Skipped during `next dev` so local coding
- * sessions don't pollute real analytics. Loads only after the visitor accepts the
- * consent banner. View data at clarity.microsoft.com.
+ * sessions don't pollute real analytics. View data at clarity.microsoft.com.
  */
 const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID ?? "xivvg4c02v";
 
 export default function Clarity() {
-  const consent = useConsent();
-  if (consent !== "granted" || !CLARITY_ID || process.env.NODE_ENV !== "production") return null;
+  if (!CLARITY_ID || process.env.NODE_ENV !== "production") return null;
 
   return (
     <Script id="ms-clarity" strategy="afterInteractive">

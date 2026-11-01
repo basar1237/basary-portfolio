@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import ConsentReset from "@/components/ConsentReset";
 import { profile } from "@/data/profile";
 import { RETENTION_DAYS } from "@/lib/visitors";
 
@@ -23,11 +22,7 @@ const sections = [
   },
   {
     title: "Nerede ve ne kadar saklanıyor?",
-    body: `Ziyaret kayıtları Vercel ve Upstash (Redis) altyapısında tutulur ve son ziyaretten ${RETENTION_DAYS} gün sonra otomatik olarak silinir. Çerezleri kabul edersen Google Analytics ve Microsoft Clarity de çalışır; bu hizmetler veriyi kendi gizlilik politikalarına göre yurt dışında işler.`,
-  },
-  {
-    title: "Tercihin",
-    body: "Çerez bildiriminde \"Reddet\"i seçersen hiçbir ziyaret kaydı tutulmaz; Google Analytics ve Clarity yalnızca \"Kabul et\" ile çalışır. Tercihini aşağıdaki düğmeyle istediğin zaman değiştirebilirsin.",
+    body: `Ziyaret kayıtları Vercel ve Upstash (Redis) altyapısında tutulur ve son ziyaretten ${RETENTION_DAYS} gün sonra otomatik olarak silinir. Ayrıca Google Analytics ve Microsoft Clarity kullanılır; bu hizmetler veriyi kendi gizlilik politikalarına göre yurt dışında işler.`,
   },
   {
     title: "Hakların (KVKK md. 11)",
@@ -52,10 +47,6 @@ export default function PrivacyPage() {
             <p className="mt-2 leading-relaxed text-neutral-600">{s.body}</p>
           </div>
         ))}
-      </div>
-
-      <div className="mt-10">
-        <ConsentReset />
       </div>
     </section>
   );
